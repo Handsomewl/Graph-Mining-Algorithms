@@ -1,3 +1,6 @@
+# From paper FRAUDAR: Bounding Graph Fraud in the Face of Camouflage
+# https://dl.acm.org/doi/10.1145/2939672.2939747
+
 import numpy as np
 import scipy.sparse.linalg as slin
 from scipy.sparse import csc_matrix, coo_matrix, csr_matrix, lil_matrix
