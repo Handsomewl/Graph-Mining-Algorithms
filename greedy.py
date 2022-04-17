@@ -3,6 +3,7 @@ from MinTree import MinTree
 from scipy.sparse import csc_matrix, coo_matrix, csr_matrix, lil_matrix
 
 # Greedy algorithm for find dense subgraph in bipartite graph!
+# To implement : greedy for monopartite graph
 def fastGreedyDecreasing(M):
     (m, n) = M.shape
     Ml = M.tolil()
