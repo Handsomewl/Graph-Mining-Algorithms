@@ -50,14 +50,12 @@ class Fraudar():
 
             if t >= k:
                 break
-
-            rs, cs = Mcur.nonzero()  # (u, v)
             # only delete inner connections
             rowSet = set(list_row)
             colSet = set(list_col)
-            for i in range(len(rs)):
-                if rs[i] in rowSet and cs[i] in colSet:
-                    Mcur[rs[i], cs[i]] = 0
+            for a, b in zip(Mcur.nonzero()[0], Mcur.nonzero()[1]):  # （u,v)
+                if a in rowSet and b in colSet:
+                    Mcur[a, b] = 0
 
     def fastGreedyDecreasing(self, M):
         (m, n) = M.shape
